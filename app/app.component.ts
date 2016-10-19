@@ -9,7 +9,8 @@ import { Album } from './album.model';
     <album-list [childAlbumList]="masterAlbumList"
     (clickSender)="showDetails($event)"></album-list>
     <edit-album [childSelectedAlbum]="selectedAlbum"
-    (doneClickedSender)="finishedEditing()"></edit-album>   </div>
+    (doneClickedSender)="finishedEditing()"></edit-album>
+    <new-album (newAlbumSender) ="addAlbum($event)"></new-album> </div>
     `
 })
 
@@ -26,5 +27,8 @@ export class AppComponent {
   }
   finishedEditing() {
     this.selectedAlbum = null;
+  }
+  addAlbum(newAlbumFromChild: Album) {
+    this.masterAlbumList.push(newAlbumFromChild);
   }
 }

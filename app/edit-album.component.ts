@@ -3,7 +3,7 @@ import { Album } from './album.model';
 
 @Component({
   selector: 'edit-album',
-  template:`
+  template: `
   <div *ngIf="childSelectedAlbum">
     <h1> Edit Album </h1>
     <div>
