@@ -7,7 +7,7 @@ import { Album } from './album.model';
   <div>
     <input *ngIf="album.bought === true" type="checkbox" checked (click)="toggleBought(false)"/>
     <input *ngIf="album.bought === false" type="checkbox" (click)="toggleBought(true)"/>
-    <label>{{ album.name }}</label>
+    <label>Buy Album</label>
   </div>
   `
 })
